@@ -7,7 +7,7 @@ class Publisher(models.Model):
         return self.name
 
 
-    class Book(models.Model):
+class Book(models.Model):
         title = models.CharField(max_length=200)
         publisher = models.ForeignKey(Publisher, on_delete=models.CASCADE)
         publication_year = models.IntegerField()
@@ -16,9 +16,9 @@ class Publisher(models.Model):
             return self.title
 
 
-        class Review(models.Model):
-            body = models.TextField()
-            book = models.ForeignKey(Book, on_delete=models.CASCADE)
+class Review(models.Model):
+    body = models.TextField()
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
 
-            def __str__(self):
-                return self.body
+    def __str__(self):
+        return self.body
