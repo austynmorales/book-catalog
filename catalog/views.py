@@ -7,7 +7,6 @@ class BookListView(ListView):
     template_name = 'book_list.html'
 
 
-
 class PublisherListView(ListView):
     model = Publisher
     template_name = 'publisher_list.html'
