@@ -1,3 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+
 <h1>Publishers</h1>
 
 {% for publisher in object_list %}
@@ -9,3 +13,5 @@
         {% endfor %}
     </ul>
 {% endfor %}
+
+{% endblock %}
